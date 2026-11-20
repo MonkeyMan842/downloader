@@ -22,16 +22,21 @@ Make sure you have **Python 3** and the following three command-line tools insta
 
 ## Setup Instructions
 
-### Windows Setup
-You can install the tools either **locally inside the project folder** (easiest) or **system-wide**:
+### 1. Download the App
+1. Go to the **Releases** section on the right side of this GitHub repository.
+2. Download the latest **`.zip` file** containing the `.py` scripts and extract it into a folder on your computer.
+
+---
+
+### 2. Windows Setup
+You can install the required tools either **locally inside the extracted folder** (easiest) or **system-wide**:
 
 #### Option A: Portable Folder Setup (Recommended)
-1. Download or clone this repository to a folder on your PC.
-2. Download the Windows executables and place them **in the exact same folder as the `.py` files**:
-   - `yt-dlp.exe` (from [yt-dlp Releases](https://github.com/releases))
-   - `ffmpeg.exe` (from [FFmpeg Windows builds](https://gyan.dev))
-   - `mkvmerge.exe` **and all accompanying `.dll` files** (from the portable `.7z` archive on the [MKVToolNix Downloads](https://mkvtoolnix.downloaddownloads.html#windows) page)
-3. Open Command Prompt or PowerShell inside that folder (tip: click the File Explorer address bar, type `cmd`, and press **Enter**) and run:
+1. Download the Windows tools and place them **directly inside the exact same folder as the extracted `.py` files**:
+   - **yt-dlp:** Download `yt-dlp.exe` from [yt-dlp Releases](https://github.com/releases) and place it directly in the folder.
+   - **FFmpeg:** Go to [Gyan.dev FFmpeg Builds](https://gyan.dev), scroll to the **release builds** section, and download **`ffmpeg-release-essentials.zip`**. Extract the `.zip` file, open the extracted folder, go into the **`bin`** subfolder, and copy **`ffmpeg.exe`** into your project folder alongside the `.py` files.
+   - **MKVToolNix:** Download the **portable `.7z` archive** (e.g., `mkvtoolnix-64-bit-xx.x.x.7z`) from the [MKVToolNix Downloads](https://mkvtoolnix.downloaddownloads.html#windows) page. Extract the `.7z` file, **take all the files out of the extracted folder** (`mkvmerge.exe`, all `.dll` files, and subfolders), and put them directly into the folder alongside the `.py` files. *(Windows 11 can extract `.7z` files natively; Windows 10 users can use [7-Zip](https://7-zip.org).)*
+2. Open Command Prompt or PowerShell inside that folder (tip: click the File Explorer address bar, type `cmd`, and press **Enter**) and run:
    ```cmd
    python your_main_script.py
    ```
@@ -45,15 +50,15 @@ winget install yt-dlp.yt-dlp Gyan.FFmpeg MoritzBunkus.MKVToolNix
 
 ---
 
-### Linux Setup
+### 3. Linux Setup
 1. Install Python Tkinter and the required tools using your distribution's package manager. For example, on Ubuntu/Debian:
    ```bash
    sudo apt update
    sudo apt install python3-tk yt-dlp ffmpeg mkvtoolnix
    ```
-2. Navigate to the project folder and launch the GUI:
+2. Navigate to the extracted folder and launch the GUI:
    ```bash
-   cd /path/to/repo
+   cd /path/to/extracted/folder
    python3 your_main_script.py
    ```
 
