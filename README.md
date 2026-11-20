@@ -16,7 +16,7 @@ A lightweight Python Tkinter desktop app for downloading video and separate audi
 Make sure you have **Python 3** and the following three command-line tools installed:
 1. **[yt-dlp](https://github.com)** — For downloading the streams.
 2. **[FFmpeg](https://ffmpeg.org)** — Required by `yt-dlp` for remuxing video to `.mkv`.
-3. **[MKVToolNix (`mkvmerge`)](https://mkvtoolnix.download)** — For merging separate video and audio tracks into one `.mkv` file.
+3. **[MKVToolNix (`mkvmerge`)](https://mkvtoolnix.download/)** — For merging separate video and audio tracks into one `.mkv` file.
 
 ---
 
@@ -34,8 +34,8 @@ You can install the required tools either **locally inside the extracted folder*
 #### Option A: Portable Folder Setup (Recommended)
 1. Download the Windows tools and place them **directly inside the exact same folder as the extracted `.py` files**:
    - **yt-dlp:** Download `yt-dlp.exe` from [yt-dlp Releases](https://github.com/releases) and place it directly in the folder.
-   - **FFmpeg:** Go to [Gyan.dev FFmpeg Builds](https://gyan.dev), scroll to the **release builds** section, and download **`ffmpeg-release-essentials.zip`**. Extract the `.zip` file, open the extracted folder, go into the **`bin`** subfolder, and copy **`ffmpeg.exe`** into your project folder alongside the `.py` files.
-   - **MKVToolNix:** Download the **portable `.7z` archive** (e.g., `mkvtoolnix-64-bit-xx.x.x.7z`) from the [MKVToolNix Downloads](https://mkvtoolnix.downloaddownloads.html#windows) page. Extract the `.7z` file, **take all the files out of the extracted folder** (`mkvmerge.exe`, all `.dll` files, and subfolders), and put them directly into the folder alongside the `.py` files. *(Windows 11 can extract `.7z` files natively; Windows 10 users can use [7-Zip](https://7-zip.org).)*
+   - **FFmpeg:** Go to [Gyan.dev FFmpeg Builds](https://gyan.dev), scroll to the **release builds** section, and download **`ffmpeg-release-essentials.zip`**. Extract the `.zip` file, open the extracted folder, go into the **`bin`** subfolder, and copy **`ffmpeg.exe` and `ffprobe.exe`** into your project folder alongside the `.py` files (you do not need `ffplay.exe`).
+   - **MKVToolNix:** Go to [MKVToolNix](https://mkvtoolnix.download/), click **Downloads** in the top menu, and scroll down to the **Windows** section. Download the **64-bit portable `.7z` archive** (named `mkvtoolnix-64-bit-xx.x.x.7z`, **not** the installer `.exe`). Extract the `.7z` file, **take all the files out of the extracted folder** (`mkvmerge.exe`, all `.dll` files, and subfolders), and put them directly into your project folder alongside the `.py` files. *(Windows 11 can extract `.7z` files natively; Windows 10 users can use [7-Zip](https://7-zip.org).)*
 2. Open Command Prompt or PowerShell inside that folder (tip: click the File Explorer address bar, type `cmd`, and press **Enter**) and run:
    ```cmd
    python your_main_script.py
